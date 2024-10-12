@@ -2,7 +2,7 @@
 
 ***Fanfan Wang***, ***Heqing Ma***, ***Xiangqing Shen***, ***Jianfei Yu***\*, ***Rui Xia***\*
 
-[![Conference](https://img.shields.io/badge/Paper-ACMMM2024-green)](https://doi.org/10.1145/3664647.3681601) [![Conference](https://img.shields.io/badge/Paper-OpenReview-red)](https://openreview.net/forum?id=Pq63G43jkQ)
+[![Conference](https://img.shields.io/badge/Paper-ACMMM%202024-4C9172)](https://doi.org/10.1145/3664647.3681601) [![Conference](https://img.shields.io/badge/Submission-OpenReview-802819)](https://openreview.net/forum?id=Pq63G43jkQ)
 
 ## Data
 
