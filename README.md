@@ -16,12 +16,11 @@ This repository contains the code for **ObG**, a multimodal pipeline framework t
 <img src="task.png" alt="task" width="500"/>
 
 
-
-
-
 ## Dataset
 
 [**ECGF**](https://huggingface.co/datasets/NUSTM/ECGF) is constructed by manually annotating the abstractive causes for each emotion labeled in the existing [ECF](https://huggingface.co/datasets/NUSTM/ECF) dataset.
+
+<img src="dataset.png" alt="task" width="400"/>
 
 
 ## Requirements
@@ -34,6 +33,14 @@ pip install -r requirements.txt
 
 
 ## Usage
+
+### 1. Emotion-cause aware video captioning
+
+#### Few-shot Data Synthesis
+
+#### Model Training
+
+### 2. Multimodal emotion cause generation
 
 
 ## Citation
