@@ -2,7 +2,7 @@
 
 ***Fanfan Wang***, ***Heqing Ma***, ***Xiangqing Shen***, ***Jianfei Yu***\*, ***Rui Xia***\*
 
-[![Dataset](https://img.shields.io/badge/Dataset-🤗_Hugging_Face-F0A336)](https://huggingface.co/datasets/NUSTM/ECGF) [![Conference](https://img.shields.io/badge/Paper-ACMMM_2024-4C9172)](https://dl.acm.org/doi/10.1145/3664647.3681601) [![Conference](https://img.shields.io/badge/Submission-OpenReview-802819)](https://openreview.net/forum?id=Pq63G43jkQ) 
+[![Dataset](https://img.shields.io/badge/Dataset-🤗_Hugging_Face-F0A336)](https://huggingface.co/datasets/NUSTM/ECGF) [![Conference](https://img.shields.io/badge/Paper-ACMMM_2024-4C9172)](https://dl.acm.org/doi/10.1145/3664647.3681601)
 
 This repository contains the code for **ObG**, a multimodal pipeline framework that first generates emotion-cause aware video captions (Observe) and then facilitates the generation of emotion causes (Generate).
 
