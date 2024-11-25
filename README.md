@@ -6,7 +6,7 @@
 
 This repository contains the code for **ObG**, a multimodal pipeline framework that first generates emotion-cause aware video captions (Observe) and then facilitates the generation of emotion causes (Generate).
 
-<img src="framework.png" alt="overview" width="900"/>
+<img src="framework.png" alt="overview" width="800"/>
 
 
 ## Task
@@ -26,9 +26,11 @@ This repository contains the code for **ObG**, a multimodal pipeline framework t
 ## Requirements
 
 ```
-conda create -n obg python=3.7
+conda env create -f environment.yml
 conda activate obg
-pip install -r requirements.txt
+
+# install nlgeval for evaluation
+pip install git+https://github.com/Maluuba/nlg-eval.git
 ```
 
 
@@ -38,9 +40,21 @@ pip install -r requirements.txt
 
 #### Few-shot Data Synthesis
 
+Gemini-Pro-Vision is used to generate emotion-cause aware video captions as supervised data for training ECCap. For the detailed instruction template, please refer to Figure 3 in our paper. 
+
 #### Model Training
 
+```
+# modify the data_dir, output_dir
+bash ECCap.sh
+```
+
 ### 2. Multimodal emotion cause generation
+
+```
+# modify the data_dir, output_dir
+bash CGM.sh
+```
 
 
 ## Citation
