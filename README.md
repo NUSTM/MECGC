@@ -6,21 +6,22 @@
 
 This repository contains the code for **ObG**, a multimodal pipeline framework that first generates emotion-cause aware video captions (Observe) and then facilitates the generation of emotion causes (Generate).
 
-<img src="framework.png" alt="overview" width="800"/>
+<img src="figures/framework.png" alt="overview" width="800"/>
+
 
 
 ## Task
 
 **Multimodal Emotion Cause Generation in Conversations (MECGC)** aims to generate the abstractive causes of given emotions based on multimodal context.
 
-<img src="task.png" alt="task" width="500"/>
+<img src="figures/task.png" alt="task" width="500"/>
 
 
 ## Dataset
 
-[**ECGF**](https://huggingface.co/datasets/NUSTM/ECGF) is constructed by manually annotating the abstractive causes for each emotion labeled in the existing [ECF](https://huggingface.co/datasets/NUSTM/ECF) dataset.
+[**ECGF**](https://huggingface.co/datasets/NUSTM/ECGF) is constructed by manually annotating the abstractive causes for each emotion labeled in the existing [ECF](https://github.com/NUSTM/MECPE/tree/main/data) dataset.
 
-<img src="dataset.png" alt="task" width="400"/>
+<img src="figures/dataset.png" alt="task" width="400"/>
 
 
 ## Requirements
@@ -42,6 +43,17 @@ pip install git+https://github.com/Maluuba/nlg-eval.git
 
 Gemini-Pro-Vision is used to generate emotion-cause aware video captions as supervised data for training ECCap. For the detailed instruction template, please refer to Figure 3 in our paper. 
 
+#### Data Format
+
+```
+{
+    "emo_utt_id": "dia14utt4",
+    "input": "question: What visual caption suggests the emotion causes for All's anger in U4? \\ context: U1. <extra_id_1> <extra_id_51> Chandler: xxx | U2. <extra_id_2> <extra_id_52> Phoebe: xxx | U3. <extra_id_3> <extra_id_53> All: xxx | U4. <extra_id_4> <extra_id_54> All: xxx",
+    "output": "A man is smoking."
+}
+```
+_Note_: 'xxx' refers to the utterance text, and the context window is [-3, 0].
+
 #### Model Training
 
 ```
@@ -50,6 +62,19 @@ bash ECCap.sh
 ```
 
 ### 2. Multimodal emotion cause generation
+
+#### Data Format
+
+```
+{
+    "emo_utt_id": "dia14utt4",
+    "input": "question: Why does All feel anger in U4? \\ caption: xxx \\ context: U1. <extra_id_1> <extra_id_51> Chandler: xxx | U2. <extra_id_2> <extra_id_52> Phoebe: xxx | U3. <extra_id_3> <extra_id_53> All: xxx | U4. <extra_id_4> <extra_id_54> All: xxx | U5. <extra_id_5> <extra_id_55> Rachel: xxx | U6. <extra_id_6> <extra_id_56> Chandler: xxx",
+    "output": "Chandler is smoking."
+}
+```
+_Note_: The context window is [-5, 2].
+
+#### Model Training
 
 ```
 # modify the data_dir, output_dir
