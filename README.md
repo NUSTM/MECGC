@@ -89,9 +89,11 @@ bash CGM.sh
   title={Observe before Generate: Emotion-Cause aware Video Caption for Multimodal Emotion Cause Generation in Conversations},
   author={Wang, Fanfan and Ma, Heqing and Shen, Xiangqing and Yu, Jianfei and Xia, Rui},
   booktitle={Proceedings of the 32st ACM International Conference on Multimedia},
-  pages={},
-  year={2024}
+  pages = {5820–5828},
+  year={2024},
+  doi = {10.1145/3664647.3681601}
 }
+
 
 @ARTICLE{ma2024monica,
   author={Ma, Heqing and Yu, Jianfei and Wang, Fanfan and Cao, Hanyu and Xia, Rui},
@@ -100,9 +102,8 @@ bash CGM.sh
   year={2024},
   volume={},
   number={},
-  pages={},
-  doi={10.1109/TAFFC.2024.3446646}
-}
+  pages={1-12},
+  doi={10.1109/TAFFC.2024.3446646}}
 ```
 
 ## Acknowledgements
